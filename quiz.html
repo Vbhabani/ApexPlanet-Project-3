@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizVerse | Quiz</title>
+    <link rel="stylesheet" href="quiz-style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">🚀 QuizVerse</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><button id="theme-toggle">🌓</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="quiz-container">
+      <section class="intro-section">
+        <h2>🧠 Get Ready, Brainiac!</h2>
+        <p>⏳ You have <strong>15 minutes</strong> to complete the quiz.</p>
+        <p>✅ +10 points for correct answers | ❌ 0 points for wrong ones.</p>
+        <p>🚀 Good Luck! May the smartest win!</p>
+
+        <div class="name-input">
+          <input type="text" id="player-name" placeholder="Enter your name" />
+          <button id="save-name">Continue</button>
+        </div>
+      </section>
+
+      <section class="main-quiz-section hidden">
+        <div class="start-section">
+          <button id="start-quiz" class="start-glow">🎮 Begin Quiz</button>
+        </div>
+
+        <div class="quiz-content hidden">
+          <div class="quiz-header">
+            <h3 id="username-display"></h3>
+            <div id="timer">⏰ 15:00</div>
+          </div>
+
+          <div class="question-box">
+            <h3 id="question-text">Question will appear here</h3>
+            <ul id="options-list"></ul>
+          </div>
+
+          <div class="nav-buttons">
+            <button id="prev-btn">⏪ Previous</button>
+            <button id="next-btn">Next ⏩</button>
+          </div>
+
+          <button id="submit-btn" class="submit-btn">🚀 Submit Quiz</button>
+        </div>
+      </section>
+
+      <div id="result-section" class="hidden">
+        <h2>🎉 Quiz Completed!</h2>
+        <p id="final-score"></p>
+        <canvas id="confetti-canvas"></canvas>
+      </div>
+    </main>
+
+    <div id="quiz-result" class="hidden">
+      <h2>Your Score: <span id="final-score"></span></h2>
+      <div id="leaderboard"></div>
+      <button id="retake-quiz">🔄 Retake Quiz</button>
+    </div>
+
+    <script src="script.js"></script>
+    <footer class="quiz-footer">
+      <div class="footer-content">
+        <p>© 2025 QuizVerse | Test Your Mind, Rule the Scoreboard</p>
+        <div class="footer-links">
+          <a href="index.html">🏠 Home</a>
+          <a href="#">📜 Terms</a>
+          <a href="#">📧 Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
